@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEO REGISTATIONS</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" 
+    id="bootstrap-css">
+    
     <style>
             body{
                 font-family:'Lato';
                 overflow-x: hidden;
+            }
+            form{
+              background:url(images/faq_bg1.png);
+              background-attachment: fixed;
+              background-size: 80vw 50vw;
             }
             .heading{
                 color: #ff8606;
@@ -24,7 +31,7 @@
             }
             }
             .labels{
-                color: black;
+                color: #ff8606;
                 font-weight: bold;
                 font-size: 1.2rem;
             }
@@ -33,15 +40,15 @@
 </head>
 <body>
 
-        <form style="background-color: lightgray;" class="py-4" method="post" autocomplete="off" name="NEO-REGISTRATIONS" action="https://razorpay.com/payment-link/plink_IC2pUzLL0nxB5i">
+        <form  class="py-4" method="post" autocomplete="off" name="NEO-REGISTRATIONS" action="redirect.html" target="_blank">
             <div class="heading text-center mx-5">NEO REGISTRATION FORM</div>
-            <div class="container mt-3"style="background-color: #ff8606; background-clip:content-box; border-radius:3vw;">
+            <div class="container mt-3"style="background-color: black; background-clip:content-box; border-radius:3%;">
                 <div class="row">
                     <div class=" d-none d-md-block col-md-6">
                         <img src="images/form.png" style="border-radius: 20px 0px 0px 20px;" alt="" width="100%" height="100%">
                     </div>
-                    <div class="d-md-none mx-3" >
-                        <img src="images/form_mob.png" alt="" width="100%" style="border-radius: 6px 6px 0px 0px;"> 
+                    <div class="d-md-none mx-3">
+                        <img src="images/form_mob.png" alt="" width="100%" "> 
                     </div>
                     
                 <div class="col-md-6">
@@ -112,12 +119,11 @@
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col-3 col-md-4"></div>
+            <div class="col-4"></div>
             <div class="col-6">
-            <a href="https://razorpay.com/payment-link/plink_IC2pUzLL0nxB5i">
-                <button type="submit" class="btn btn-dark btn-lg my-5">Pay Now</button>
+            <a href="redirect.html">
+                <button type="submit" class="btn btn-dark btn-lg my-5" style="background-color: #ff8606;">Submit</button>
             </a>
-        
             
     </div>
         </div>
@@ -129,6 +135,15 @@
           <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbzuo9r2gl-d5VG6W_JwRYil-WF2lp0-pqGRo9nN4hdQHDOa4hGkxWQBCD5kxoyvtHBh/exec'
             const form = document.forms['NEO-REGISTRATIONS']
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                alert("Thanks for Submitting the Details..Click OK to move to payment!!!")
+
+                window.location.href = "redirect.html";
+            })
+            
           </script>
 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
