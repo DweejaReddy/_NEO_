@@ -478,19 +478,19 @@
     <!-- QUERIES PAGE -->
     <section class="container-fluid contact">
       <form class="py-4" method="post" name="NEO-QUERIES">
-      <div class="heading text-center mx-5 pb-4">ASK YOUR QUERIES</div>
+      <div class="heading text-center mx-5 pb-4" data-aos="fade-up" data-aos-duration="2000">ASK YOUR QUERIES</div>
       <div class="row">
         <div class="col-md-1"></div>
         <div class="form-group col-12 col-md-5">
-                <input style="margin-bottom:1%; type="text" name="Name" class="form-control rounded-pill" class="form-control" id="name" placeholder="Name*" required>
-                <input style="margin:9% 0;" type="email" name="Email" class="form-control rounded-pill" class="form-control" id="Email" placeholder="Email*" required>
-                <input style="margin-bottom:5%; type="text" name="Phone" class="form-control rounded-pill" class="form-control" id="Phone" placeholder="Phone*" required>
+                <input type="text" data-aos="fade-up" data-aos-duration="2000" name="Name" class="form-control rounded-pill" class="form-control" id="name" placeholder="Name*" required>
+                <input style="margin:4.5% 0;" data-aos="fade-up" data-aos-duration="2000" type="email" name="Email" class="form-control rounded-pill" class="form-control" id="Email" placeholder="Email*" required>
+                <input type="text" data-aos="fade-up" data-aos-duration="2000" name="Phone" class="form-control rounded-pill" class="form-control" id="Phone" placeholder="Phone*" required>
         </div>
-        <div class="form-group col-12 col-md-5">
-        <textarea type="text" name="Message" rows="8" class="form-control rounded-pill" class="form-control" id="Message" placeholder="Message*" required></textarea>
+        <div class="form-group col-12 col-md-5" data-aos="fade-up" data-aos-duration="2000">
+        <textarea type="text" name="Message" rows="6" class="form-control rounded-pill" class="form-control" id="Message" placeholder="Message*" required></textarea>
         </div>
 
-            <div class="col text-center" stye="margin-bottom:-10%;">
+            <div class="col text-center">
                 <button type="submit"  name="submit"  class="btn btn-dark btn-lg my-5" style="background-color: #ff8606;" value="SUBMIT">Submit</button>
             
             
